@@ -1,18 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
 import BYOIOrderForm from './BYOIOrderForm'
-import './App.css'
+import BYOIOderForm from './BYOIOderForm'
+import BYOIOrderForm1 from './BYOIOrderForm1'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Route>
-        <BYOIOrderForm />
-      </Route>
-      <div>
+      <Routes>
+        <Route path="/" element={<BYOIOrderForm />} />
+        <Route path='1/' element={< BYOIOderForm />} />
+        <Route path='2/' element={< BYOIOrderForm1 />} />
+      </Routes>
+      {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -31,7 +33,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }
