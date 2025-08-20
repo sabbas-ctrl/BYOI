@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import BYOIOrderForm from './BYOIOrderForm'
 import './App.css'
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
 
   return (
     <>
+      <Route>
+        <BYOIOrderForm />
+      </Route>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
